@@ -2,7 +2,6 @@ package it.noemurr.final_sword.items;
 
 import it.noemurr.final_sword.Names;
 import it.noemurr.final_sword.References;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -21,7 +20,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class ItemFinalSwordHilt extends Item {
 
-    public void setCreativeTab(){
+    public ItemFinalSwordHilt(){
         setCreativeTab(CreativeTabs.MISC);
     }
 

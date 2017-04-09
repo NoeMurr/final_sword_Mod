@@ -40,10 +40,6 @@ public class Items {
         finalSwordBlade.registerRender(mesher);
         finalSwordHilt.registerRender(mesher);
         finalSword.registerRender(mesher);
-        finalSwordHilt.setCreativeTab();
-        finalSwordBlade.setCreativeTab();
-        finalSword.setCreativeTab();
-
     }
 
     public static void initRecepies(){

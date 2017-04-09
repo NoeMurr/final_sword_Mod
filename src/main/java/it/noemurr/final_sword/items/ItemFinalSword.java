@@ -2,6 +2,7 @@ package it.noemurr.final_sword.items;
 
 import it.noemurr.final_sword.Names;
 import it.noemurr.final_sword.References;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -10,6 +11,8 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -26,9 +29,6 @@ public class ItemFinalSword extends ItemSword {
         super(EnumHelper.addToolMaterial(
                 "tutorial_material", 3, Integer.MAX_VALUE, 8.0f,
                 2.8f, 0));
-    }
-
-    public void setCreativeTab(){
         setCreativeTab(CreativeTabs.COMBAT);
     }
 
@@ -40,6 +40,11 @@ public class ItemFinalSword extends ItemSword {
     @Override
     public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
         return false; // no damage to the item
+    }
+
+    @Override
+    public boolean onBlockDestroyed(ItemStack stack, World worldIn, IBlockState state, BlockPos pos, EntityLivingBase entityLiving) {
+        return false; // no damage when a block is destroyed.
     }
 
     @Override

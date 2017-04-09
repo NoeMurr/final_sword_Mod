@@ -20,7 +20,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class ItemFinalSwordBlade extends Item {
 
-    public void setCreativeTab(){
+    public ItemFinalSwordBlade() {
         setCreativeTab(CreativeTabs.MISC);
     }
 
